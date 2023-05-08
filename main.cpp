@@ -77,6 +77,7 @@ public:
     }
 };
 void test_for_class(){
+    int buff[]{};
     A<int> D;
     D.SetA(10);
     std::cout << D.GetA() << std::endl;
@@ -86,7 +87,7 @@ void test_for_class(){
     std::cout << F.Get_for_class_b() << std::endl;
     F.SetA(14);
     std::cout << F.GetA() << std::endl;
-    F.Set_for_class_buff(buff{5, 7, 9, 4}, 4);
+    F.Set_for_class_buff(buff, 4);
     F.Get_for_class_buff(4);
 }
 
