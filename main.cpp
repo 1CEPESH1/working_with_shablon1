@@ -66,7 +66,7 @@ public:
     void Set_for_class_buff(const T buff[10], int n){
         Str.n = n;
         for(int i = 0; i < n; i++){
-            Str.buff[i] = buff[n];
+            Str.buff[i] = buff[i];
         }
     }
     void Get_for_class_buff(int n){
@@ -77,16 +77,17 @@ public:
     }
 };
 void test_for_class(){
-    int buff[]{};
+    int buff[]{5, 6, 5, 3};
     A<int> D;
     D.SetA(10);
     std::cout << D.GetA() << std::endl;
-
     B<int> F;
     F.Set_for_class_b(10);
     std::cout << F.Get_for_class_b() << std::endl;
     F.SetA(14);
     std::cout << F.GetA() << std::endl;
+
+    std::cout << std::endl;
     F.Set_for_class_buff(buff, 4);
     F.Get_for_class_buff(4);
 }
